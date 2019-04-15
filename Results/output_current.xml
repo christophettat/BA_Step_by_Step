@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190415 17:13:27.243" generator="Robot 3.1.1 (Python 2.7.10 on darwin)">
+<suite source="/Users/cbolle/Desktop/RF_BA_Step_by_Step/TestCases" id="s1" name="TestCases">
+<suite source="/Users/cbolle/Desktop/RF_BA_Step_by_Step/TestCases/Suite2" id="s1-s1" name="Suite2">
+<suite source="/Users/cbolle/Desktop/RF_BA_Step_by_Step/TestCases/Suite2/Test1.robot" id="s1-s1-s1" name="Test1">
+<test id="s1-s1-s1-t1" name="My Step 4">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="NOT_RUN" endtime="20190415 17:13:27.277" starttime="20190415 17:13:27.277"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Toto</arg>
+</arguments>
+<status status="NOT_RUN" endtime="20190415 17:13:27.277" starttime="20190415 17:13:27.277"></status>
+</kw>
+<status status="PASS" endtime="20190415 17:13:27.278" critical="yes" starttime="20190415 17:13:27.276"></status>
+</test>
+<status status="PASS" endtime="20190415 17:13:27.278" starttime="20190415 17:13:27.274"></status>
+</suite>
+<status status="PASS" endtime="20190415 17:13:27.279" starttime="20190415 17:13:27.272"></status>
+</suite>
+<status status="PASS" endtime="20190415 17:13:27.279" starttime="20190415 17:13:27.247"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TestCases" pass="1">TestCases</stat>
+<stat fail="0" id="s1-s1" name="Suite2" pass="1">TestCases.Suite2</stat>
+<stat fail="0" id="s1-s1-s1" name="Test1" pass="1">TestCases.Suite2.Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
