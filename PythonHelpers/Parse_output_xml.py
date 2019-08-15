@@ -9,6 +9,7 @@ results are written over the original file.
 
 import sys
 from robot.api import ExecutionResult, ResultVisitor
+import re
 
 
 class MyVisitor(ResultVisitor):
@@ -19,13 +20,12 @@ class MyVisitor(ResultVisitor):
 
     def visit_suite(self, suite):
         for t in suite.tests:
-            m = self.SuitePath + "/" + suite.name + "/" + t.name
+            m = t.longname + "\t" + t.status 
             for tag in t.tags:
-                if tag.startswith("scheduler_"):
-                    # translate the tag to an execution time for next step
+                matchTag = re.match( r'^next_at_([0-9]{14})$', tag)
+                if matchTag:
+                   m = m + "\t" + matchTag.group(1)
 
-
-                    m = m + "\t" + tag
             print m
             self.logger.logln(m)
         suite.suites.visit(MyVisitor(self.SuitePath + "/" +  suite.name, self.logger))

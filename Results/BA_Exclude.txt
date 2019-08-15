@@ -1,7 +1,0 @@
-/TestCases/Suite1/Test1/My Test 1
-/TestCases/Suite1/Test1/My Test 2
-/TestCases/Suite2/Test1/My Step 1
-/TestCases/Suite2/Test1/My Step 2
-/TestCases/Suite2/Test1/My Step 3
-/TestCases/Suite2/Test2/My Step 1
-/TestCases/Suite2/Test2/My Step 2

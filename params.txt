@@ -1,0 +1,14 @@
+# it might happen that no tests are to be run because of the timing 
+--RunEmptySuite  
+# I don't like verbose output
+#--console dotted   
+# we deal with reporting ourselves via the rebot command
+--report NONE   
+# as above
+--log NONE      
+--output ./Results/output_current.xml 
+# will save variables at the end of a run and load them back at the beginning of the next
+--listener ./PythonHelpers/Variables_Saver.py:./RunState  
+# determines which tests needs to be run in this iteration
+--prerunmodifier ./PythonHelpers/suite_tests_filter.py:./RunState/_Already_Run.txt:./RunState/_To_Run.txt 
+./TestCases
