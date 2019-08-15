@@ -13,7 +13,7 @@ class Variables_Saver(object):
         self.subdir=subdir
 
     def start_suite(self, data, result):
-            UID=hashlib.md5(data.id).hexdigest()
+            UID=hashlib.md5(data.longname).hexdigest()
             self.varfile= os.path.join(self.subdir, UID + ".json")
             print "Variable file is :", self.varfile
 
