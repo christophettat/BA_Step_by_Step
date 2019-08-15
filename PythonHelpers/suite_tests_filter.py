@@ -30,6 +30,7 @@ class suite_tests_filter(SuiteVisitor):
 
         #suite.suites = [s for s in suite.suites if self._to_keep(s)]
         found_test = False #will be set to true once a test will have been selected for running in this suite
+        laststatus=""
         self.next_at = "" # will contain the latest time constraint set in the tests
         test_to_keep = []
         for t in suite.tests:
@@ -42,6 +43,7 @@ class suite_tests_filter(SuiteVisitor):
                     self.next_at = fields[2]            # this is date/time part of tag next_at_YYYYMMDDHHMMSS 
                 if fields[1] == "FAIL":                 # do not consider tests after a a failed one
                     found_test = True  
+                    laststatus = "FAIL"
                     
             elif not found_test:  # run this test if time is okay (according to time constraints)
                 found_test = True
@@ -57,8 +59,13 @@ class suite_tests_filter(SuiteVisitor):
                     self.pendingfile.write("WAIT - " + t.longname + "\n")
             else:
                 #drop all subsequent tests from this run
-                print ("<<<< - " + t.longname )
-                self.pendingfile.write("<<<< - " + t.longname + "\n")
+                if not laststatus == "FAIL":
+                    print ("TODO - " + t.longname )
+                    self.pendingfile.write("TODO - " + t.longname + "\n")
+                else:
+                    print ("FAIL - " + t.longname )
+                    self.pendingfile.write("FAIL - " + t.longname + "\n")
+
         suite.tests = test_to_keep
 
 

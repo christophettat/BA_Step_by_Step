@@ -9,11 +9,9 @@ My Test 1
 My Test 2
    ${myvar}=   catenate   ${myvar}  _  b
    Log  ${myvar}
-   ${date}=	 Get Current Date	  increment=00:03:00  result_format=%Y%m%d%H%M%S
+   ${date}=	 Get Current Date	  increment=00:02:00  result_format=%Y%m%d%H%M%S
    ${tag}=   catenate  SEPARATOR=  next_at_  ${date}
    Set Tags  ${tag}
-
-
 
 My Test 3 
    ${myvar}=   catenate   ${myvar}  _  c
