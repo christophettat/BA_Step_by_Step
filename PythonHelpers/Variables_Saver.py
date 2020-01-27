@@ -15,7 +15,7 @@ class Variables_Saver(object):
     def start_suite(self, data, result):
             UID=hashlib.md5(data.longname).hexdigest()
             self.varfile= os.path.join(self.subdir, UID + ".json")
-            print "Variable file is :", self.varfile
+            print ("Variable file is :", self.varfile)
 
     def start_test(self, data, result):
         #print "************* Starting test exect\n"

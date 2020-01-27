@@ -26,7 +26,7 @@ class MyVisitor(ResultVisitor):
                 if matchTag:
                    m = m + "\t" + matchTag.group(1)
 
-            print m
+            print (m)
             self.logger.logln(m)
         suite.suites.visit(MyVisitor(self.SuitePath + "/" +  suite.name, self.logger))
 
@@ -45,10 +45,10 @@ def check_tests(inpath, outpath):
     l=my_logger(outpath)
     result.visit(MyVisitor("", l))
     l.close()
-    print "All Done"
+    print ("All Done")
 
 if __name__ == '__main__':
     try:
         check_tests(*sys.argv[1:])
     except TypeError:
-        print __doc__
+        print (__doc__)

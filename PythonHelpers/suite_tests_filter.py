@@ -35,7 +35,7 @@ class suite_tests_filter(SuiteVisitor):
         test_to_keep = []
         for t in suite.tests:
             prevresult = [i for i in self.tests if i.startswith(t.longname)]
-            if len(prevresult) <> 0: # skipping tests already executed                
+            if len(prevresult) !=  0: # skipping tests already executed                
                 # get status and tags of run 
                 fields = prevresult[0].split("\t")
                 print (fields[1] + " - " + t.longname)  # this is status (PASS FAIL)

@@ -26,7 +26,7 @@ class pass_test(ResultVisitor):
                 status=""
                 comment=""
                 t = [i for i in self.ttopass if i.startswith(test.longname)]
-                if len(t) <> 0: # current test found in the override list          
+                if len(t) != 0: # current test found in the override list          
                 # get Status and comment 
                     fields = t[0].split("\t")
                     if len(fields) >= 2:
@@ -34,7 +34,7 @@ class pass_test(ResultVisitor):
                     if len(fields) >= 3:
                         comment=fields[2]
 
-                if status == 'PASS' and comment<>'':
+                if status == 'PASS' and comment != '':
                     test.status = 'PASS'
                     test.message = comment
                     print ("Updt FAILED Test: " + test.longname + " -> " + status + " -> " + comment) 
@@ -56,4 +56,4 @@ if __name__ == '__main__':
     try:
         check_tests(*sys.argv[1:])
     except TypeError:
-        print __doc__
+        print (__doc__)
