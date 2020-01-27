@@ -8,12 +8,12 @@ import hashlib
 class Variables_Saver(object):
     ROBOT_LISTENER_API_VERSION = 3
 
-    def __init__(self, subdir='./RunState'):
+    def __init__(self, subdir="./RunState"):
         self.UID = ""
         self.subdir=subdir
 
     def start_suite(self, data, result):
-            UID=hashlib.md5(data.longname).hexdigest()
+            UID=hashlib.md5(data.longname.encode('utf-8')).hexdigest()
             self.varfile= os.path.join(self.subdir, UID + ".json")
             print ("Variable file is :", self.varfile)
 
