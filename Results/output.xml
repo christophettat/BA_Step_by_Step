@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 3.1.2 (Python 3.8.1 on win32)" generated="20200127 23:17:20.508" rpa="false">
+<robot generator="Rebot 3.1.2 (Python 3.8.1 on win32)" generated="20200128 21:48:47.049" rpa="false">
 <suite id="s1" name="TestCases" source="C:\Users\cbolle\Desktop\GitProjects\BA_Step_by_Step\TestCases">
 <suite id="s1-s1" name="Tests.1" source="C:\Users\cbolle\Desktop\GitProjects\BA_Step_by_Step\TestCases\tests.1.robot">
 <test id="s1-s1-t1" name="My Test 11">
@@ -11,52 +11,20 @@
 <assign>
 <var>${myvar}</var>
 </assign>
-<msg timestamp="20200127 22:49:36.556" level="INFO">${myvar} = a</msg>
-<status status="PASS" starttime="20200127 22:49:36.556" endtime="20200127 22:49:36.556"></status>
+<msg timestamp="20200128 21:48:46.683" level="INFO">${myvar} = a</msg>
+<status status="PASS" starttime="20200128 21:48:46.683" endtime="20200128 21:48:46.683"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${myvar}</arg>
 </arguments>
-<msg timestamp="20200127 22:49:36.556" level="INFO">a</msg>
-<status status="PASS" starttime="20200127 22:49:36.556" endtime="20200127 22:49:36.556"></status>
+<msg timestamp="20200128 21:48:46.684" level="INFO">a</msg>
+<status status="PASS" starttime="20200128 21:48:46.683" endtime="20200128 21:48:46.684"></status>
 </kw>
-<status status="PASS" starttime="20200127 22:49:36.540" endtime="20200127 22:49:36.556" critical="yes"></status>
+<status status="PASS" starttime="20200128 21:48:46.682" endtime="20200128 21:48:46.684" critical="yes"></status>
 </test>
-<test id="s1-s1-t2" name="My Test 12">
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${myvar}</arg>
-<arg>_</arg>
-<arg>b</arg>
-</arguments>
-<assign>
-<var>${myvar}</var>
-</assign>
-<msg timestamp="20200127 23:14:40.664" level="INFO">${myvar} = a _ b _ b _ b _ b _ b _ b _ b _ b</msg>
-<status status="PASS" starttime="20200127 23:14:40.664" endtime="20200127 23:14:40.664"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${myvar}</arg>
-</arguments>
-<msg timestamp="20200127 23:14:40.664" level="INFO">a _ b _ b _ b _ b _ b _ b _ b _ b</msg>
-<status status="PASS" starttime="20200127 23:14:40.664" endtime="20200127 23:14:40.664"></status>
-</kw>
-<kw name="Fail" library="BuiltIn">
-<doc>Fails the test with the given message and optionally alters its tags.</doc>
-<arguments>
-<arg>this is a failed test</arg>
-</arguments>
-<msg timestamp="20200127 23:14:40.664" level="FAIL">this is a failed test</msg>
-<status status="FAIL" starttime="20200127 23:14:40.664" endtime="20200127 23:14:40.664"></status>
-</kw>
-<status status="FAIL" starttime="20200127 23:14:40.648" endtime="20200127 23:14:40.664" critical="yes">*HTML* Test added from merged output.&lt;hr&gt;this is a failed test</status>
-</test>
-<status status="FAIL" starttime="N/A" endtime="N/A" elapsedtime="32"></status>
+<status status="PASS" starttime="20200128 21:48:46.679" endtime="20200128 21:48:46.690"></status>
 </suite>
 <suite id="s1-s2" name="Tests.2" source="C:\Users\cbolle\Desktop\GitProjects\BA_Step_by_Step\TestCases\tests.2.robot">
 <test id="s1-s2-t1" name="My Test 1">
@@ -68,128 +36,20 @@
 <assign>
 <var>${myvar}</var>
 </assign>
-<msg timestamp="20200127 22:49:36.571" level="INFO">${myvar} = a</msg>
-<status status="PASS" starttime="20200127 22:49:36.571" endtime="20200127 22:49:36.571"></status>
+<msg timestamp="20200128 21:48:46.694" level="INFO">${myvar} = a</msg>
+<status status="PASS" starttime="20200128 21:48:46.694" endtime="20200128 21:48:46.694"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${myvar}</arg>
 </arguments>
-<msg timestamp="20200127 22:49:36.571" level="INFO">a</msg>
-<status status="PASS" starttime="20200127 22:49:36.571" endtime="20200127 22:49:36.571"></status>
+<msg timestamp="20200128 21:48:46.695" level="INFO">a</msg>
+<status status="PASS" starttime="20200128 21:48:46.695" endtime="20200128 21:48:46.695"></status>
 </kw>
-<status status="PASS" starttime="20200127 22:49:36.556" endtime="20200127 22:49:36.571" critical="yes"></status>
+<status status="PASS" starttime="20200128 21:48:46.694" endtime="20200128 21:48:46.695" critical="yes"></status>
 </test>
-<test id="s1-s2-t2" name="My Test 2">
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${myvar}</arg>
-<arg>_</arg>
-<arg>b</arg>
-</arguments>
-<assign>
-<var>${myvar}</var>
-</assign>
-<msg timestamp="20200127 23:14:40.680" level="INFO">${myvar} = a _ b _ b _ b _ b _ b _ b _ b _ b</msg>
-<status status="PASS" starttime="20200127 23:14:40.680" endtime="20200127 23:14:40.680"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${myvar}</arg>
-</arguments>
-<msg timestamp="20200127 23:14:40.680" level="INFO">a _ b _ b _ b _ b _ b _ b _ b _ b</msg>
-<status status="PASS" starttime="20200127 23:14:40.680" endtime="20200127 23:14:40.680"></status>
-</kw>
-<kw name="Get Current Date" library="DateTime">
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<arguments>
-<arg>increment=00:01:10</arg>
-<arg>result_format=%Y%m%d%H%M%S</arg>
-</arguments>
-<assign>
-<var>${date}</var>
-</assign>
-<msg timestamp="20200127 23:14:40.680" level="INFO">${date} = 20200127231550</msg>
-<status status="PASS" starttime="20200127 23:14:40.680" endtime="20200127 23:14:40.680"></status>
-</kw>
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>SEPARATOR=</arg>
-<arg>next_at_</arg>
-<arg>${date}</arg>
-</arguments>
-<assign>
-<var>${tag}</var>
-</assign>
-<msg timestamp="20200127 23:14:40.680" level="INFO">${tag} = next_at_20200127231550</msg>
-<status status="PASS" starttime="20200127 23:14:40.680" endtime="20200127 23:14:40.680"></status>
-</kw>
-<kw name="Set Tags" library="BuiltIn">
-<doc>Adds given ``tags`` for the current test or all tests in a suite.</doc>
-<arguments>
-<arg>${tag}</arg>
-</arguments>
-<msg timestamp="20200127 23:14:40.680" level="INFO">Set tag 'next_at_20200127231550'.</msg>
-<status status="PASS" starttime="20200127 23:14:40.680" endtime="20200127 23:14:40.680"></status>
-</kw>
-<tags>
-<tag>next_at_20200127231550</tag>
-</tags>
-<status status="PASS" starttime="20200127 23:14:40.664" endtime="20200127 23:14:40.680" critical="yes">*HTML* Test added from merged output.</status>
-</test>
-<test id="s1-s2-t3" name="My Test 3">
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${myvar}</arg>
-<arg>_</arg>
-<arg>c</arg>
-</arguments>
-<assign>
-<var>${myvar}</var>
-</assign>
-<msg timestamp="20200127 23:15:51.008" level="INFO">${myvar} = a _ b _ b _ b _ b _ b _ b _ b _ b _ c</msg>
-<status status="PASS" starttime="20200127 23:15:51.008" endtime="20200127 23:15:51.008"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${myvar}</arg>
-</arguments>
-<msg timestamp="20200127 23:15:51.008" level="INFO">a _ b _ b _ b _ b _ b _ b _ b _ b _ c</msg>
-<status status="PASS" starttime="20200127 23:15:51.008" endtime="20200127 23:15:51.008"></status>
-</kw>
-<status status="PASS" starttime="20200127 23:15:50.992" endtime="20200127 23:15:51.008" critical="yes">*HTML* Test added from merged output.</status>
-</test>
-<test id="s1-s2-t4" name="My Test 4">
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${myvar}</arg>
-<arg>_</arg>
-<arg>d</arg>
-</arguments>
-<assign>
-<var>${myvar}</var>
-</assign>
-<msg timestamp="20200127 23:16:06.805" level="INFO">${myvar} = a _ b _ b _ b _ b _ b _ b _ b _ b _ c _ d</msg>
-<status status="PASS" starttime="20200127 23:16:06.805" endtime="20200127 23:16:06.805"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${myvar}</arg>
-</arguments>
-<msg timestamp="20200127 23:16:06.805" level="INFO">a _ b _ b _ b _ b _ b _ b _ b _ b _ c _ d</msg>
-<status status="PASS" starttime="20200127 23:16:06.805" endtime="20200127 23:16:06.805"></status>
-</kw>
-<status status="PASS" starttime="20200127 23:16:06.805" endtime="20200127 23:16:06.805" critical="yes">*HTML* Test added from merged output.</status>
-</test>
-<status status="PASS" starttime="N/A" endtime="N/A" elapsedtime="47"></status>
+<status status="PASS" starttime="20200128 21:48:46.691" endtime="20200128 21:48:46.700"></status>
 </suite>
 <suite id="s1-s3" name="Tests" source="C:\Users\cbolle\Desktop\GitProjects\BA_Step_by_Step\TestCases\tests.robot">
 <test id="s1-s3-t1" name="My Test 1">
@@ -201,145 +61,35 @@
 <assign>
 <var>${myvar}</var>
 </assign>
-<msg timestamp="20200127 22:49:36.587" level="INFO">${myvar} = a</msg>
-<status status="PASS" starttime="20200127 22:49:36.587" endtime="20200127 22:49:36.587"></status>
+<msg timestamp="20200128 21:48:46.707" level="INFO">${myvar} = a</msg>
+<status status="PASS" starttime="20200128 21:48:46.707" endtime="20200128 21:48:46.707"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${myvar}</arg>
 </arguments>
-<msg timestamp="20200127 22:49:36.587" level="INFO">a</msg>
-<status status="PASS" starttime="20200127 22:49:36.587" endtime="20200127 22:49:36.587"></status>
+<msg timestamp="20200128 21:48:46.708" level="INFO">a</msg>
+<status status="PASS" starttime="20200128 21:48:46.708" endtime="20200128 21:48:46.708"></status>
 </kw>
-<status status="PASS" starttime="20200127 22:49:36.571" endtime="20200127 22:49:36.587" critical="yes"></status>
+<status status="PASS" starttime="20200128 21:48:46.705" endtime="20200128 21:48:46.708" critical="yes"></status>
 </test>
-<test id="s1-s3-t2" name="My Test 2">
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${myvar}</arg>
-<arg>_</arg>
-<arg>b</arg>
-</arguments>
-<assign>
-<var>${myvar}</var>
-</assign>
-<msg timestamp="20200127 23:14:40.695" level="INFO">${myvar} = a _ b _ b _ b _ b _ b _ b _ b _ b</msg>
-<status status="PASS" starttime="20200127 23:14:40.695" endtime="20200127 23:14:40.695"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${myvar}</arg>
-</arguments>
-<msg timestamp="20200127 23:14:40.695" level="INFO">a _ b _ b _ b _ b _ b _ b _ b _ b</msg>
-<status status="PASS" starttime="20200127 23:14:40.695" endtime="20200127 23:14:40.695"></status>
-</kw>
-<kw name="Get Current Date" library="DateTime">
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<arguments>
-<arg>increment=00:02:00</arg>
-<arg>result_format=%Y%m%d%H%M%S</arg>
-</arguments>
-<assign>
-<var>${date}</var>
-</assign>
-<msg timestamp="20200127 23:14:40.695" level="INFO">${date} = 20200127231640</msg>
-<status status="PASS" starttime="20200127 23:14:40.695" endtime="20200127 23:14:40.695"></status>
-</kw>
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>SEPARATOR=</arg>
-<arg>next_at_</arg>
-<arg>${date}</arg>
-</arguments>
-<assign>
-<var>${tag}</var>
-</assign>
-<msg timestamp="20200127 23:14:40.695" level="INFO">${tag} = next_at_20200127231640</msg>
-<status status="PASS" starttime="20200127 23:14:40.695" endtime="20200127 23:14:40.695"></status>
-</kw>
-<kw name="Set Tags" library="BuiltIn">
-<doc>Adds given ``tags`` for the current test or all tests in a suite.</doc>
-<arguments>
-<arg>${tag}</arg>
-</arguments>
-<msg timestamp="20200127 23:14:40.695" level="INFO">Set tag 'next_at_20200127231640'.</msg>
-<status status="PASS" starttime="20200127 23:14:40.695" endtime="20200127 23:14:40.695"></status>
-</kw>
-<tags>
-<tag>next_at_20200127231640</tag>
-</tags>
-<status status="PASS" starttime="20200127 23:14:40.695" endtime="20200127 23:14:40.695" critical="yes">*HTML* Test added from merged output.</status>
-</test>
-<test id="s1-s3-t3" name="My Test 3">
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${myvar}</arg>
-<arg>_</arg>
-<arg>c</arg>
-</arguments>
-<assign>
-<var>${myvar}</var>
-</assign>
-<msg timestamp="20200127 23:17:04.602" level="INFO">${myvar} = a _ b _ b _ b _ b _ b _ b _ b _ b _ c</msg>
-<status status="PASS" starttime="20200127 23:17:04.602" endtime="20200127 23:17:04.602"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${myvar}</arg>
-</arguments>
-<msg timestamp="20200127 23:17:04.602" level="INFO">a _ b _ b _ b _ b _ b _ b _ b _ b _ c</msg>
-<status status="PASS" starttime="20200127 23:17:04.602" endtime="20200127 23:17:04.602"></status>
-</kw>
-<status status="PASS" starttime="20200127 23:17:04.586" endtime="20200127 23:17:04.602" critical="yes">*HTML* Test added from merged output.</status>
-</test>
-<test id="s1-s3-t4" name="My Test 4">
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${myvar}</arg>
-<arg>_</arg>
-<arg>d</arg>
-</arguments>
-<assign>
-<var>${myvar}</var>
-</assign>
-<msg timestamp="20200127 23:17:10.836" level="INFO">${myvar} = a _ b _ b _ b _ b _ b _ b _ b _ b _ c _ d</msg>
-<status status="PASS" starttime="20200127 23:17:10.836" endtime="20200127 23:17:10.836"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${myvar}</arg>
-</arguments>
-<msg timestamp="20200127 23:17:10.851" level="INFO">a _ b _ b _ b _ b _ b _ b _ b _ b _ c _ d</msg>
-<status status="PASS" starttime="20200127 23:17:10.851" endtime="20200127 23:17:10.851"></status>
-</kw>
-<status status="PASS" starttime="20200127 23:17:10.836" endtime="20200127 23:17:10.851" critical="yes">*HTML* Test added from merged output.</status>
-</test>
-<status status="PASS" starttime="N/A" endtime="N/A" elapsedtime="47"></status>
+<status status="PASS" starttime="20200128 21:48:46.701" endtime="20200128 21:48:46.715"></status>
 </suite>
-<status status="FAIL" starttime="N/A" endtime="N/A" elapsedtime="126"></status>
+<status status="PASS" starttime="20200128 21:48:46.642" endtime="20200128 21:48:46.717"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="9" fail="1">Critical Tests</stat>
-<stat pass="9" fail="1">All Tests</stat>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0">next_at_20200127231550</stat>
-<stat pass="1" fail="0">next_at_20200127231640</stat>
 </tag>
 <suite>
-<stat pass="9" fail="1" id="s1" name="TestCases">TestCases</stat>
-<stat pass="1" fail="1" id="s1-s1" name="Tests.1">TestCases.Tests.1</stat>
-<stat pass="4" fail="0" id="s1-s2" name="Tests.2">TestCases.Tests.2</stat>
-<stat pass="4" fail="0" id="s1-s3" name="Tests">TestCases.Tests</stat>
+<stat pass="3" fail="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Tests.1">TestCases.Tests.1</stat>
+<stat pass="1" fail="0" id="s1-s2" name="Tests.2">TestCases.Tests.2</stat>
+<stat pass="1" fail="0" id="s1-s3" name="Tests">TestCases.Tests</stat>
 </suite>
 </statistics>
 <errors>

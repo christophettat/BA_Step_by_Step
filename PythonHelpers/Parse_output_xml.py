@@ -1,10 +1,5 @@
-"""Usage: check_test_times.py seconds inpath [outpath]
-
-Reads test execution result from an output XML file and checks that no test
-took longer than given amount of seconds to execute.
-
-Optional `outpath` specifies where to write processed results. If not given,
-results are written over the original file.
+"""Parses an output.xml file to generate a list of all executed tests, with their tag matching next_at.... pattern
+   the output of this utility will be used to skip those tests in a next execution
 """
 
 import sys

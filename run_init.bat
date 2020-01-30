@@ -1,6 +1,6 @@
 REM empty  the list of executed tests 
-del -r ./Results/*
-del -r ./RunState/*
+del /Q .\Results\*.*
+del /Q .\RunState\*.*
 echo. 2> ./RunState/_Already_Run.txt
 
 
