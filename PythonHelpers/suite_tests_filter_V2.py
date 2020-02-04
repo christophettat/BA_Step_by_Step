@@ -46,15 +46,18 @@ class suite_tests_filter_V2(SuiteVisitor):
 
     def __init__(self, output_xml_file, StateSummary):
         # load the tests already executed
-        SS=os.path.splitext(StateSummary)[0]
+        ss=os.path.splitext(StateSummary)[0]
         
         try:
-            os.remove(ss + '.log')
-            os.remove(ss.run)
+            os.remove(ss + '.log') # this is the log from a previous run
         except OSError:
             pass
-        
-        self.StateSummary = open(SS +'.log','w')
+        try:
+            os.remove(ss + '.run') # this is a flag file to indicate that we have tests to run (if file not present, all possible tests steps have been executed)
+        except OSError:
+            pass
+        self.flagrunning = ss + '.run'
+        self.StateSummary = open(ss +'.log','w')
         self.parser= my_output_xml_parser(output_xml_file)
         
 
@@ -72,20 +75,19 @@ class suite_tests_filter_V2(SuiteVisitor):
             prevresult = [i for i in run_tests if i.longname.startswith(t.longname)]
             if len(prevresult) !=  0: # skipping tests already executed                
                 # get status and tags of previous run 
-                self.mylogger (prevresult[0].status + " - " + t.longname)  # this is status (PASS FAIL)
+                m = prevresult[0].status + " - " + t.longname  # this is status (PASS FAIL)
                 # now look for a Tag with special meaning (tagging a test will influence behaviour of the next test in the suite like wait for a timer to expire)
                 for tag in prevresult[0].tags:
                     matchTag = re.match( r'^next_at_([0-9]{14})$', tag)
                     if matchTag:
-                        m = m + "\t" + matchTag.group(1)
-                        self.mylogger ("next@: " + m)                
-                        self.mylogger ("next@: " + m)                
-                        self.next_at = m            # this is date/time part of tag next_at_YYYYMMDDHHMMSS 
+                        m = m + "\tnext@:" + matchTag.group(1)
+                        self.next_at = matchTag.group(1)            # this is date/time part of tag next_at_YYYYMMDDHHMMSS 
                 if prevresult[0].status == "FAIL":                 # do not consider tests after a a failed one
                     found_test = True  
                     laststatus = "FAIL"
-                    
+                self.mylogger (m)
             elif not found_test:  # run this test if time is okay (according to time constraints)
+                open(self.flagrunning, 'w').close() # create flag to indicate we have tests to run
                 found_test = True
                 #waitfor = datetime.strptime( self.next_at, '%Y%m%d%H%M%S')
                 if self.next_at == "": # no constraints, let"s run it

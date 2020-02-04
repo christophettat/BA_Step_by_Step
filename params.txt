@@ -10,5 +10,5 @@
 # will save variables at the end of a run and load them back at the beginning of the next
 --listener ./PythonHelpers/Variables_Saver.py:./RunState  
 # determines which tests needs to be run in this iteration
---prerunmodifier ./PythonHelpers/suite_tests_filter_V2.py:./Results/output.xml:./Results/StateSummary.log
+--prerunmodifier ./PythonHelpers/suite_tests_filter_V2.py:./Results/output.xml:./RunState/StateSummary.log
 ./TestCases
