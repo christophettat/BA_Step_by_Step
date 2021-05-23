@@ -1,3 +1,3 @@
 
-#produce log and report
+#produce log and reports
 rebot --outputdir ./Results/ ./Results/output.xml
